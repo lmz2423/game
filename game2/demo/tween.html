@@ -14,11 +14,23 @@
     <title></title>
 </head>
 <body>
-<div style="transform-style: preserve-3d;">
-<canvas id="gameView" width="400px" height="400px">
-</canvas>
-</div>
-<script type="text/javascript" src="src/easeljs-0.8.1.min.js"></script>
-<script type="text/javascript" src="self/Event.js"></script>
+<canvas id="gameView" width="960" height="400"></canvas>
+<script src="js/easeljs-0.8.1.min.js"></script>
+<script src="js/Event.js"></script>
+<script src="js/EventDispatcher.js"></script>
+<script src="js/tweenjs-0.6.1.min.js"></script>
+<script src="js/Ease.js"></script>
+<script>
+    var circleCount = 25;
+    var tweens;
+    var stage = new createjs.Stage("gameView");
+    for(var i=0; i<circleCount; i++){
+        var circle = new createjs.Shape();
+        circle.graphics.setStrokeStyle(15);
+        circle.graphics.beginStroke('#f0f');
+        circle.compositeOperation = 'lighter';
+        var tween = createjs.Tween.get.(circle).to({x:300,y:200,})
+    }
+</script>
 </body>
 </html>

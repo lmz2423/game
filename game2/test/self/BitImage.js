@@ -8,7 +8,7 @@
     stage.addChild(gameView);
     var bitMap = new createjs.Bitmap('image/test.png');
     bitMap.
-    gameView.addChild(bitMap);
+        stage.addChild(bitMap);
     var image = new Image();
     image.src='image/test.png';
     image.onload = function(){
