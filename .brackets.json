@@ -1,0 +1,13 @@
+{
+    "jscodehints.detectedExclusions": [
+        "G:/kuaipang/game/game2/src/easeljs/version_movieclip.js",
+        "G:/kuaipang/game/game2/src/easeljs/version.js",
+        "G:/kuaipang/game/game2/test/src/easeljs-0.8.1.min.js",
+        "G:/kuaipang/game/game2/test/src/movieclip-0.8.1.min.js",
+        "G:/kuaipang/game/game2/test/src/tweenjs-0.6.1.min.js",
+        "G:/kuaipang/game/game2/src/easeljs/geom/DisplayProps.js",
+        "G:/kuaipang/game/game2/demo/js/weixinShare.js",
+        "G:/kuaipang/game/game2/docs/EaselJS_docs-0.8.1/assets/vendor/prettify/prettify-min.js",
+        "G:/kuaipang/game/game2/demo/modify/index.js"
+    ]
+}
