@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="keywords" content=""/>
+    <meta name="Description" content=""/>
+    <meta name="renderer" content="webkit">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <title>graphics</title>
+</head>
+<body>
+<canvas id="gameView" height="800" width="800" style="border: 1px solid"></canvas>
+<script type="text/javascript" src="../library/easeljs-0.8.1.min.js"></script>
+<script>
+    var stage = new createjs.Stage("gameView");
+
+    var g = new createjs.Graphics();
+    var shape = new createjs.Shape(g);
+    g.setStrokeStyle(1);
+    g.beginStroke("#000000");
+    g.beginFill("red");
+    g.drawCircle(0, 0, 30);
+    stage.addChild(shape);
+    stage.update();
+</script>
+</body>
+</html>

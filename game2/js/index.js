@@ -197,7 +197,7 @@
         h = canvas.height = gameDefaultConfig.stage.height / scale;
         canvas.style.width = gameDefaultConfig.stage.width + "px";
         canvas.style.height = gameDefaultConfig.stage.height + 'px';
-        stage = new createjs.Stage(canvas);
+        stage = new createjs.Stage("gameView");
         createjs.Touch.enable(stage);
 
        var manifest = [
@@ -520,7 +520,6 @@
             Game.map,
             Game.writeLogo
         );
-
 
         for (i = 0; i < treesNum; i = i + 1) {
             var tree = createTree("first");

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="keywords" content=""/>
+    <meta name="Description" content=""/>
+    <meta name="renderer" content="webkit">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <title>test</title>
+</head>
+<body>
+<button id="click">click me</button>
+<canvas id="gameView"></canvas>
+<script src="../library/preloadjs-0.6.1.min.js"></script>
+<script src="../library/soundjs-0.6.1.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        'use strict';
+        var manifest = [{
+            src: '../music/001-02.mp3', id: "startMusic",data:4
+        }];
+
+        var loader = new createjs.LoadQueue();
+        loader.installPlugin(createjs.Sound);
+        loader.addEventListener("complete", loadComplete);
+
+        loader.loadManifest(manifest);
+        if (!createjs.Sound.initializeDefaultPlugins()) {
+            return;
+        }
+        createjs.Sound.alternateExtensions = ["mp3"];
+        function loadComplete() {
+
+        }
+        document.getElementById("click").addEventListener("click", function(){
+            var kk = createjs.Sound.play('startMusic');
+        });
+    }());
+</script>
+</body>
+</html>
